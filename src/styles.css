@@ -108,7 +108,7 @@ a {
 
 .siteHeader nav a {
   min-height: 40px;
-  padding: 11px 13px;
+  padding: 11px 10px;
   border: 1px solid transparent;
   color: var(--mist);
   font-size: 0.82rem;
@@ -409,7 +409,10 @@ h3 {
 .projectGrid,
 .stackMatrix,
 .timeline,
-.proofBand {
+.proofBand,
+.atlasGrid,
+.credentialGrid,
+.qaList {
   display: grid;
   gap: 18px;
 }
@@ -420,9 +423,11 @@ h3 {
 
 .focusCard,
 .projectCard,
+.atlasCard,
 .stackRow,
 .timelineItem,
-.proofBand article {
+.proofBand article,
+.credentialCard {
   border: 1px solid rgba(18, 22, 17, 0.18);
   background: rgba(255, 250, 240, 0.74);
   color: var(--ink);
@@ -443,8 +448,10 @@ h3 {
 
 .focusCard p,
 .projectBody p,
+.atlasCard p,
 .timelineItem p,
 .proofBand p,
+.credentialCard li,
 .contactSection p,
 .caseCopy p {
   margin: 0;
@@ -454,6 +461,73 @@ h3 {
 
 .projectGrid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.atlasShell {
+  padding-top: 90px;
+}
+
+.atlasGrid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.atlasCard {
+  position: relative;
+  display: grid;
+  gap: 14px;
+  min-height: 410px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.atlasCard::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background:
+    linear-gradient(90deg, rgba(18, 22, 17, 0.04) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(18, 22, 17, 0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+}
+
+.atlasCard > * {
+  position: relative;
+}
+
+.atlasHead {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.atlasHead svg {
+  flex: 0 0 auto;
+  color: #577a00;
+}
+
+.atlasHead .eyebrow {
+  margin: 0 0 8px;
+  color: #577a00;
+}
+
+.projectType {
+  display: inline-flex;
+  justify-self: start;
+  min-height: 30px;
+  align-items: center;
+  padding: 6px 10px;
+  border: 1px solid rgba(18, 22, 17, 0.18);
+  background: rgba(183, 255, 60, 0.2);
+  color: #26301f;
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.proofLine {
+  padding-top: 12px;
+  border-top: 1px solid rgba(18, 22, 17, 0.16);
+  font-size: 0.86rem;
 }
 
 .projectCard {
@@ -607,6 +681,50 @@ h3 {
   white-space: pre-wrap;
 }
 
+.qaBand {
+  display: grid;
+  grid-template-columns: minmax(0, 0.68fr) minmax(330px, 0.32fr);
+  gap: 30px;
+  align-items: start;
+  width: min(1180px, calc(100% - 40px));
+  margin: 78px auto 0;
+  padding: 34px;
+  background:
+    linear-gradient(90deg, rgba(183, 255, 60, 0.08) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(183, 255, 60, 0.07) 1px, transparent 1px),
+    var(--void);
+  background-size: 36px 36px;
+  color: var(--paper);
+  box-shadow: var(--shadow);
+}
+
+.qaBand h2 {
+  color: var(--paper);
+}
+
+.qaBand p {
+  max-width: 720px;
+  margin: 18px 0 0;
+  color: #dce7d3;
+  line-height: 1.7;
+}
+
+.qaList article {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 11px;
+  align-items: start;
+  padding: 14px;
+  border: 1px solid rgba(255, 250, 240, 0.18);
+  background: rgba(255, 250, 240, 0.06);
+  color: #edf5e6;
+  line-height: 1.55;
+}
+
+.qaList svg {
+  color: var(--signal);
+}
+
 .stackMatrix {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -680,6 +798,32 @@ h3 {
   gap: 14px;
   min-height: 230px;
   padding: 22px;
+}
+
+.credentialsShell {
+  padding-top: 76px;
+}
+
+.credentialGrid {
+  grid-template-columns: 0.9fr 1.25fr 0.95fr;
+}
+
+.credentialCard {
+  display: grid;
+  gap: 14px;
+  min-height: 220px;
+  padding: 22px;
+}
+
+.credentialCard svg {
+  color: #577a00;
+}
+
+.credentialCard ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 18px;
 }
 
 .contactSection {
@@ -759,12 +903,15 @@ h3 {
   .statRail,
   .focusGrid,
   .projectGrid,
-  .proofBand {
+  .proofBand,
+  .atlasGrid,
+  .credentialGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .sectionIntro,
   .caseBand,
+  .qaBand,
   .contactSection {
     grid-template-columns: 1fr;
   }
@@ -843,13 +990,16 @@ h3 {
   .focusGrid,
   .projectGrid,
   .stackMatrix,
-  .proofBand {
+  .proofBand,
+  .atlasGrid,
+  .credentialGrid {
     grid-template-columns: 1fr;
   }
 
   .statRail,
   .sectionShell,
   .caseBand,
+  .qaBand,
   .proofBand,
   .contactSection {
     width: calc(100% - 28px);
@@ -861,6 +1011,8 @@ h3 {
 
   .statTile,
   .focusCard,
+  .atlasCard,
+  .credentialCard,
   .proofBand article {
     min-height: 0;
   }
@@ -878,6 +1030,7 @@ h3 {
   }
 
   .caseBand,
+  .qaBand,
   .contactSection {
     margin-top: 74px;
     padding: 22px;

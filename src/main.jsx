@@ -4,20 +4,28 @@ import {
   ArrowRight,
   BadgeCheck,
   Bot,
+  BriefcaseBusiness,
   Bug,
   Code2,
+  Cpu,
   Database,
   ExternalLink,
   FileCheck2,
+  Gamepad2,
+  GraduationCap,
   Github,
   Globe2,
+  Languages,
   Layers3,
   Linkedin,
   Mail,
   Network,
+  PenTool,
   Rocket,
   ShieldCheck,
+  ShoppingCart,
   Terminal,
+  TestTubeDiagonal,
 } from "lucide-react";
 import "./styles.css";
 
@@ -27,6 +35,7 @@ const links = {
   email: "mailto:nahuelbalsas199@gmail.com",
   dunit: "https://d-unit.world",
   scoutboard: "https://github.com/Nahuel149/scoutboard-ai",
+  autoresearch: "https://github.com/Nahuel149/autoresearch-rtx3070",
 };
 
 const stats = [
@@ -90,6 +99,97 @@ const projects = [
   },
 ];
 
+const projectAtlas = [
+  {
+    eyebrow: "Full-stack SaaS",
+    title: "D-Unit",
+    type: "Private codebase, public product page",
+    summary:
+      "Analytics SaaS for digital businesses. I worked across dashboards, FastAPI services, Meta integrations, AI chat, billing, security middleware, tests, Docker, and AWS/EKS deployment work.",
+    proof: "Public product page, private GitHub history, architecture notes, 177 tracked commits, 94 deployment records.",
+    tags: ["React", "TypeScript", "FastAPI", "MongoDB", "MySQL", "OpenAI", "Meta API", "MercadoPago"],
+    href: links.dunit,
+    icon: Rocket,
+  },
+  {
+    eyebrow: "Public portfolio app",
+    title: "ScoutBoard AI",
+    type: "Public-safe code repo",
+    summary:
+      "A football research and data QA app with source policies, validation rules, analytics pages, report previews, and workflow documentation.",
+    proof: "Next.js app, tests, build scripts, sample data, public-safe reports, and source-tracking workflow.",
+    tags: ["Next.js", "TypeScript", "Vitest", "Data QA", "Football analytics"],
+    href: links.scoutboard,
+    icon: Network,
+  },
+  {
+    eyebrow: "ML experimentation",
+    title: "Autoresearch RTX 3070 fork",
+    type: "Public GitHub fork",
+    summary:
+      "Local adaptation of the autoresearch experiment setup for a Windows/RTX 3070 environment. The work is useful as evidence of AI-agent experimentation, Python setup, and research workflow curiosity.",
+    proof: "Fork under Nahuel149 with local branch work.",
+    tags: ["Python", "PyTorch", "LLM training", "Agent workflow", "RTX 3070"],
+    href: links.autoresearch,
+    icon: Cpu,
+  },
+  {
+    eyebrow: "Remote web development",
+    title: "Smart Wifi Access",
+    type: "Contract work",
+    summary:
+      "Web application work focused on performance, retention, PWA behavior, WebAssembly, server-side rendering, frontend optimization, and ecommerce usability.",
+    proof: "Resume-backed contract experience. No private client files published.",
+    tags: ["PWA", "WebAssembly", "SSR", "Frontend optimization", "Ecommerce UX"],
+    href: links.linkedin,
+    icon: Globe2,
+  },
+  {
+    eyebrow: "Enterprise development",
+    title: "IBM Java/Spring systems",
+    type: "Professional experience",
+    summary:
+      "Java/Spring work for enterprise financial systems, including database tasks, JUnit/Mockito tests, functional testing, and end-to-end test work.",
+    proof: "Resume-backed employment history. Client-specific internals are not public.",
+    tags: ["Java", "Spring", "JUnit", "Mockito", "Financial systems"],
+    href: links.linkedin,
+    icon: BriefcaseBusiness,
+  },
+  {
+    eyebrow: "Game localization QA",
+    title: "Keywords Studios Tokyo",
+    type: "Professional QA experience",
+    summary:
+      "Mobile and console localization QA with English-Spanish, Spanish-English, and Japanese source reference work. Publicly mentionable context includes PS5, iOS, Android, Jira bug reporting, regression checks, smoke tests, and build tracking.",
+    proof: "NDA-safe role summary and fictional bug-report sample.",
+    tags: ["LQA", "Jira", "PS5", "iOS", "Android", "Regression testing"],
+    href: links.linkedin,
+    icon: Gamepad2,
+  },
+  {
+    eyebrow: "Ecommerce operator",
+    title: "Electronic Commerce NB",
+    type: "Self-employed business",
+    summary:
+      "Ran a digital-products ecommerce business with online marketing across social channels. This supports product sense, customer communication, inventory/sales thinking, and small-business operations.",
+    proof: "Timeline and resume-backed self-employment history.",
+    tags: ["Ecommerce", "Digital products", "Marketing", "Customer support", "Operations"],
+    href: links.linkedin,
+    icon: ShoppingCart,
+  },
+  {
+    eyebrow: "Writing and QA samples",
+    title: "Public-safe proof pack",
+    type: "Self-created samples",
+    summary:
+      "NDA-safe samples for bug reports, source-backed research summaries, AI-draft cleanup, and Kyoto local-area article writing. These are samples, not client deliverables.",
+    proof: "Local Markdown samples and public-safe portfolio notes.",
+    tags: ["Bug reports", "Research summaries", "Japanese writing", "Editing", "Source checks"],
+    href: links.github,
+    icon: PenTool,
+  },
+];
+
 const stack = [
   ["Frontend", "React", "TypeScript", "Vite", "Next.js", "Tailwind", "Material UI"],
   ["Backend", "Python", "FastAPI", "Java", "Spring", "REST APIs", "Webhooks"],
@@ -122,6 +222,37 @@ const timeline = [
   },
 ];
 
+const qaFacts = [
+  "Spanish and English localization QA, with Japanese source reference when needed.",
+  "Publicly mentionable titles include Dead Space, Sword Art Online Variant Showdown, Exoprimal, and Street Fighter 6.",
+  "Reported localization, truncation, UI overlap, placeholder, terminology, crash/log, and gameplay clarity issues.",
+  "Used reproducible steps, actual/expected results, evidence, build/platform/language details, and regression notes.",
+];
+
+const credentials = [
+  {
+    icon: GraduationCap,
+    title: "Education",
+    lines: ["University of Buenos Aires", "Bachelor's degree in Accounting / CPA track"],
+  },
+  {
+    icon: BadgeCheck,
+    title: "Certifications",
+    lines: [
+      "Cambridge English First Certificate Exam",
+      "Certified Analytics & Data Specialist",
+      "Certified Email Marketing Specialist",
+      "Certified Ecommerce Marketing Specialist",
+      "Certified Customer Acquisition Specialist",
+    ],
+  },
+  {
+    icon: Languages,
+    title: "Languages",
+    lines: ["Spanish native-level", "English fluent", "Japanese: simple conversation, stronger written work communication"],
+  },
+];
+
 function App() {
   return (
     <>
@@ -132,6 +263,7 @@ function App() {
         </a>
         <nav>
           <a href="#work">Work</a>
+          <a href="#atlas">Atlas</a>
           <a href="#stack">Stack</a>
           <a href="#timeline">Timeline</a>
           <a href="#contact">Contact</a>
@@ -235,6 +367,41 @@ function App() {
           </div>
         </section>
 
+        <section className="sectionShell atlasShell" id="atlas" aria-labelledby="atlas-title">
+          <div className="sectionIntro">
+            <p className="eyebrow">Project atlas</p>
+            <h2 id="atlas-title">More of the work I can safely talk about.</h2>
+          </div>
+          <div className="atlasGrid">
+            {projectAtlas.map((project) => {
+              const Icon = project.icon;
+              return (
+                <article className="atlasCard" key={project.title}>
+                  <div className="atlasHead">
+                    <Icon size={24} />
+                    <div>
+                      <p className="eyebrow">{project.eyebrow}</p>
+                      <h3>{project.title}</h3>
+                    </div>
+                  </div>
+                  <span className="projectType">{project.type}</span>
+                  <p>{project.summary}</p>
+                  <p className="proofLine">{project.proof}</p>
+                  <ul className="tagList" aria-label={`${project.title} tags`}>
+                    {project.tags.map((tag) => (
+                      <li key={tag}>{tag}</li>
+                    ))}
+                  </ul>
+                  <a className="textLink" href={project.href} target="_blank" rel="noreferrer">
+                    <span>Reference</span>
+                    <ExternalLink size={16} />
+                  </a>
+                </article>
+              );
+            })}
+          </div>
+        </section>
+
         <section className="caseBand" aria-labelledby="case-title">
           <div className="caseCopy">
             <p className="eyebrow">Case study snapshot</p>
@@ -257,6 +424,24 @@ ops: Docker + AWS/EKS + health checks`}</pre>
           </div>
         </section>
 
+        <section className="qaBand" aria-labelledby="qa-title">
+          <div>
+            <p className="eyebrow">QA range</p>
+            <h2 id="qa-title">Game testing taught me to write bugs developers can actually use.</h2>
+            <p>
+              My QA background sits next to my development work. That matters: when something breaks, I think about user state, build number, locale, platform, logs, expected behavior, and regression risk.
+            </p>
+          </div>
+          <div className="qaList">
+            {qaFacts.map((fact) => (
+              <article key={fact}>
+                <TestTubeDiagonal size={18} />
+                <span>{fact}</span>
+              </article>
+            ))}
+          </div>
+        </section>
+
         <section className="sectionShell" id="stack" aria-labelledby="stack-title">
           <div className="sectionIntro">
             <p className="eyebrow">Stack matrix</p>
@@ -273,6 +458,29 @@ ops: Docker + AWS/EKS + health checks`}</pre>
                 </div>
               </article>
             ))}
+          </div>
+        </section>
+
+        <section className="sectionShell credentialsShell" aria-labelledby="credentials-title">
+          <div className="sectionIntro">
+            <p className="eyebrow">Background</p>
+            <h2 id="credentials-title">The non-code pieces still matter.</h2>
+          </div>
+          <div className="credentialGrid">
+            {credentials.map((item) => {
+              const Icon = item.icon;
+              return (
+                <article className="credentialCard" key={item.title}>
+                  <Icon size={24} />
+                  <h3>{item.title}</h3>
+                  <ul>
+                    {item.lines.map((line) => (
+                      <li key={line}>{line}</li>
+                    ))}
+                  </ul>
+                </article>
+              );
+            })}
           </div>
         </section>
 
