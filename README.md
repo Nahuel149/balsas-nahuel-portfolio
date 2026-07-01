@@ -29,6 +29,10 @@ Open the local URL printed by Vite.
 npm run build
 ```
 
+The live GitHub Pages site is published from the committed `docs/` folder on
+`main`. After changing the site, run `npm run build`, refresh `docs/` from
+`dist/`, commit, and push.
+
 ## Privacy Boundary
 
 Do not copy resumes, CrowdWorks logs, proposal files, screenshots with private
