@@ -28,6 +28,7 @@ import {
   ShoppingCart,
   Terminal,
   TestTubeDiagonal,
+  Trophy,
 } from "lucide-react";
 import "./styles.css";
 
@@ -38,6 +39,7 @@ const links = {
   dunit: "https://d-unit.world",
   scoutboard: "https://github.com/Nahuel149/scoutboard-ai",
   autoresearch: "https://github.com/Nahuel149/autoresearch-rtx3070",
+  copaKahl: "https://copa-kahl.onrender.com/",
 };
 
 const stats = [
@@ -120,6 +122,17 @@ const projects = [
     icon: Network,
   },
   {
+    eyebrow: "Live product design",
+    title: "Copa Kahl",
+    role: "World Cup 2026 prediction app",
+    summary:
+      "A deployed prode app with standings, prediction flows, rules, champions views, admin result loading, comments, sharing, and image export for tournament groups.",
+    tags: ["React", "Product UX", "Game rules", "Standings", "Sharing", "Render"],
+    href: links.copaKahl,
+    cta: "Open live app",
+    icon: Trophy,
+  },
+  {
     eyebrow: "QA and writing proof",
     title: "Bug reports and research samples",
     role: "Localization QA, source summaries, and rewrite work",
@@ -154,6 +167,17 @@ const projectAtlas = [
     tags: ["Next.js", "TypeScript", "Vitest", "Data QA", "Football analytics"],
     href: links.scoutboard,
     icon: Network,
+  },
+  {
+    eyebrow: "Live sports product",
+    title: "Copa Kahl",
+    type: "Deployed Render app",
+    summary:
+      "World Cup 2026 prediction game for friends or groups, with participant standings, exact-score and knockout scoring, rules, champions views, comments, share actions, and downloadable table images.",
+    proof: "Live Render deployment reviewed from public routes including table, predictions, rules, champions, admin entry, comments, sharing, and image download surfaces.",
+    tags: ["React", "Render", "Tournament UX", "Scoring logic", "Admin flows", "Social sharing"],
+    href: links.copaKahl,
+    icon: Trophy,
   },
   {
     eyebrow: "ML experimentation",

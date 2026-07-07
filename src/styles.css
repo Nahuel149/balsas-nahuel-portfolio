@@ -539,7 +539,7 @@ h3 {
 }
 
 .projectGrid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .atlasShell {
@@ -641,6 +641,14 @@ h3 {
     linear-gradient(90deg, rgba(255, 250, 240, 0.12) 1px, transparent 1px),
     linear-gradient(0deg, rgba(255, 250, 240, 0.12) 1px, transparent 1px),
     linear-gradient(135deg, #1b1616 0%, #5b392d 42%, #8e7cff 100%);
+  background-size: 32px 32px, 32px 32px, auto;
+}
+
+.projectCard:nth-child(4) .projectVisual {
+  background:
+    linear-gradient(90deg, rgba(255, 250, 240, 0.12) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(255, 250, 240, 0.12) 1px, transparent 1px),
+    linear-gradient(135deg, #10171b 0%, #2f6c78 44%, #d7ff47 100%);
   background-size: 32px 32px, 32px 32px, auto;
 }
 
