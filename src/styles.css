@@ -373,6 +373,9 @@ h3 {
 
 .sectionShell,
 .caseBand,
+.routePanel,
+.caseDetailShell,
+.principlesBand,
 .proofBand,
 .contactSection {
   width: min(1180px, calc(100% - 40px));
@@ -412,7 +415,9 @@ h3 {
 .proofBand,
 .atlasGrid,
 .credentialGrid,
-.qaList {
+.qaList,
+.routeGrid,
+.caseDetailShell {
   display: grid;
   gap: 18px;
 }
@@ -424,6 +429,8 @@ h3 {
 .focusCard,
 .projectCard,
 .atlasCard,
+.routeCard,
+.caseDetailCard,
 .stackRow,
 .timelineItem,
 .proofBand article,
@@ -449,6 +456,8 @@ h3 {
 .focusCard p,
 .projectBody p,
 .atlasCard p,
+.routeCard p,
+.caseDetailCard p,
 .timelineItem p,
 .proofBand p,
 .credentialCard li,
@@ -457,6 +466,76 @@ h3 {
   margin: 0;
   color: #4e554b;
   line-height: 1.65;
+}
+
+.routePanel {
+  display: grid;
+  gap: 22px;
+  margin-top: 72px;
+  padding: 24px;
+  background:
+    linear-gradient(90deg, rgba(183, 255, 60, 0.08) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(183, 255, 60, 0.07) 1px, transparent 1px),
+    var(--void);
+  background-size: 36px 36px;
+  color: var(--paper);
+  box-shadow: var(--shadow);
+}
+
+.routeIntro {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.routeIntro svg {
+  color: var(--acid);
+}
+
+.routeIntro .eyebrow {
+  margin-bottom: 8px;
+}
+
+.routeIntro h2 {
+  color: var(--paper);
+  font-size: 3.2rem;
+}
+
+.routeGrid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.routeCard {
+  display: grid;
+  gap: 12px;
+  min-height: 246px;
+  padding: 18px;
+  border: 1px solid rgba(255, 250, 240, 0.16);
+  background: rgba(255, 250, 240, 0.06);
+  color: var(--paper);
+  text-decoration: none;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.routeCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(183, 255, 60, 0.5);
+  background: rgba(183, 255, 60, 0.09);
+}
+
+.routeCard > span {
+  color: var(--acid);
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.routeCard svg {
+  color: var(--signal);
+}
+
+.routeCard p {
+  color: #dce7d3;
 }
 
 .projectGrid {
@@ -681,6 +760,26 @@ h3 {
   white-space: pre-wrap;
 }
 
+.caseDetailShell {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 18px;
+}
+
+.caseDetailCard {
+  display: grid;
+  gap: 13px;
+  min-height: 245px;
+  padding: 20px;
+}
+
+.caseDetailCard svg {
+  color: #577a00;
+}
+
+.caseDetailCard h3 {
+  color: var(--ink);
+}
+
 .qaBand {
   display: grid;
   grid-template-columns: minmax(0, 0.68fr) minmax(330px, 0.32fr);
@@ -723,6 +822,58 @@ h3 {
 
 .qaList svg {
   color: var(--signal);
+}
+
+.principlesBand {
+  display: grid;
+  grid-template-columns: minmax(0, 0.55fr) minmax(360px, 0.45fr);
+  gap: 28px;
+  align-items: start;
+  margin-top: 78px;
+  padding: 32px;
+  border: 1px solid rgba(18, 22, 17, 0.18);
+  background: rgba(255, 250, 240, 0.78);
+  color: var(--ink);
+  box-shadow: 0 16px 40px rgba(18, 22, 17, 0.08);
+}
+
+.principlesBand h2 {
+  color: var(--ink);
+}
+
+.principlesBand .eyebrow {
+  color: #527300;
+}
+
+.principlesBand ol {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: principle;
+}
+
+.principlesBand li {
+  counter-increment: principle;
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  min-height: 54px;
+  color: #3f483c;
+  line-height: 1.5;
+}
+
+.principlesBand li::before {
+  content: counter(principle, decimal-leading-zero);
+  display: grid;
+  place-items: center;
+  width: 42px;
+  aspect-ratio: 1;
+  background: var(--acid);
+  color: var(--void);
+  font-weight: 800;
 }
 
 .stackMatrix {
@@ -903,17 +1054,24 @@ h3 {
   .statRail,
   .focusGrid,
   .projectGrid,
+  .routeGrid,
   .proofBand,
   .atlasGrid,
-  .credentialGrid {
+  .credentialGrid,
+  .caseDetailShell {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .sectionIntro,
   .caseBand,
   .qaBand,
+  .principlesBand,
   .contactSection {
     grid-template-columns: 1fr;
+  }
+
+  .routeIntro h2 {
+    font-size: 2.65rem;
   }
 
   .contactActions {
@@ -977,6 +1135,10 @@ h3 {
     font-size: 2.15rem;
   }
 
+  .routeIntro h2 {
+    font-size: 2.15rem;
+  }
+
   .heroLead {
     font-size: 0.98rem;
   }
@@ -989,17 +1151,22 @@ h3 {
   .statRail,
   .focusGrid,
   .projectGrid,
+  .routeGrid,
   .stackMatrix,
   .proofBand,
   .atlasGrid,
-  .credentialGrid {
+  .credentialGrid,
+  .caseDetailShell {
     grid-template-columns: 1fr;
   }
 
   .statRail,
   .sectionShell,
   .caseBand,
+  .routePanel,
+  .caseDetailShell,
   .qaBand,
+  .principlesBand,
   .proofBand,
   .contactSection {
     width: calc(100% - 28px);
@@ -1011,6 +1178,8 @@ h3 {
 
   .statTile,
   .focusCard,
+  .routeCard,
+  .caseDetailCard,
   .atlasCard,
   .credentialCard,
   .proofBand article {
@@ -1030,7 +1199,9 @@ h3 {
   }
 
   .caseBand,
+  .routePanel,
   .qaBand,
+  .principlesBand,
   .contactSection {
     margin-top: 74px;
     padding: 22px;

@@ -6,6 +6,7 @@ import {
   Bot,
   BriefcaseBusiness,
   Bug,
+  CheckCircle2,
   Code2,
   Cpu,
   Database,
@@ -22,6 +23,7 @@ import {
   Network,
   PenTool,
   Rocket,
+  Route,
   ShieldCheck,
   ShoppingCart,
   Terminal,
@@ -60,6 +62,37 @@ const focus = [
     icon: Database,
     title: "Data and integrations",
     text: "MongoDB, MySQL, Meta Graph API, OpenAI, MailerLite, MercadoPago, data checks, reports, and source-backed research.",
+  },
+];
+
+const proofRoutes = [
+  {
+    label: "Full-stack SaaS",
+    title: "Start with D-Unit",
+    text: "Best signal for React, FastAPI, integrations, auth, billing, deployment, and production-style debugging.",
+    href: "#case-study",
+    icon: Rocket,
+  },
+  {
+    label: "QA / testing",
+    title: "Read the QA range",
+    text: "Best signal for bug reports, regression checks, localization QA, Playwright, pytest, and developer-ready reproduction notes.",
+    href: "#qa-range",
+    icon: Bug,
+  },
+  {
+    label: "Data / AI workflows",
+    title: "Open ScoutBoard",
+    text: "Best signal for source tracking, validation rules, report workflows, football analytics, and public-safe TypeScript code.",
+    href: links.scoutboard,
+    icon: Network,
+  },
+  {
+    label: "Writing / research",
+    title: "Use the proof pack",
+    text: "Best signal for source-backed summaries, AI-draft cleanup, readable Japanese samples, and careful delivery checks.",
+    href: "#proof-points",
+    icon: PenTool,
   },
 ];
 
@@ -229,6 +262,33 @@ const qaFacts = [
   "Used reproducible steps, actual/expected results, evidence, build/platform/language details, and regression notes.",
 ];
 
+const caseStudyDetails = [
+  {
+    title: "Integration reliability",
+    text: "Debugged Meta/OAuth connection states, token behavior, reconnect flows, manual sync behavior, API response handling, and entitlement mismatches.",
+  },
+  {
+    title: "AI and reporting flow",
+    text: "Built AI chat behavior around conversation history, context refresh, feedback, MongoDB-backed retrieval, report flows, and human review needs.",
+  },
+  {
+    title: "Security and operations",
+    text: "Worked with CSRF checks, security headers, gateway middleware, rate-limit records, threat alerts, cost tracking, TTL-indexed collections, and health checks.",
+  },
+  {
+    title: "Testing discipline",
+    text: "Used Vitest, Testing Library, Playwright, pytest, and regression checks around auth, billing, Meta integrations, automation, and AI chat context.",
+  },
+];
+
+const operatingPrinciples = [
+  "Ask early when expected behavior is unclear.",
+  "Keep private client data out of public proof.",
+  "Write bugs with enough detail for another person to reproduce them.",
+  "Use AI as draft support, then verify sources and edit manually.",
+  "Prefer small verified releases over impressive claims.",
+];
+
 const credentials = [
   {
     icon: GraduationCap,
@@ -331,6 +391,29 @@ function App() {
           </div>
         </section>
 
+        <section className="routePanel" aria-labelledby="route-title">
+          <div className="routeIntro">
+            <Route size={24} aria-hidden="true" />
+            <div>
+              <p className="eyebrow">Proof navigator</p>
+              <h2 id="route-title">Pick the track that matches the role.</h2>
+            </div>
+          </div>
+          <div className="routeGrid">
+            {proofRoutes.map((route) => {
+              const Icon = route.icon;
+              return (
+                <a className="routeCard" href={route.href} key={route.title}>
+                  <span>{route.label}</span>
+                  <Icon size={22} aria-hidden="true" />
+                  <h3>{route.title}</h3>
+                  <p>{route.text}</p>
+                </a>
+              );
+            })}
+          </div>
+        </section>
+
         <section className="sectionShell workShell" id="work" aria-labelledby="work-title">
           <div className="sectionIntro">
             <p className="eyebrow">Selected work</p>
@@ -402,7 +485,7 @@ function App() {
           </div>
         </section>
 
-        <section className="caseBand" aria-labelledby="case-title">
+        <section className="caseBand" id="case-study" aria-labelledby="case-title">
           <div className="caseCopy">
             <p className="eyebrow">Case study snapshot</p>
             <h2 id="case-title">D-Unit connected product analytics, AI assistance, billing, and operations.</h2>
@@ -424,7 +507,17 @@ ops: Docker + AWS/EKS + health checks`}</pre>
           </div>
         </section>
 
-        <section className="qaBand" aria-labelledby="qa-title">
+        <section className="caseDetailShell" aria-label="D-Unit case study details">
+          {caseStudyDetails.map((item) => (
+            <article className="caseDetailCard" key={item.title}>
+              <CheckCircle2 size={20} aria-hidden="true" />
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
+        </section>
+
+        <section className="qaBand" id="qa-range" aria-labelledby="qa-title">
           <div>
             <p className="eyebrow">QA range</p>
             <h2 id="qa-title">Game testing taught me to write bugs developers can actually use.</h2>
@@ -440,6 +533,18 @@ ops: Docker + AWS/EKS + health checks`}</pre>
               </article>
             ))}
           </div>
+        </section>
+
+        <section className="principlesBand" aria-labelledby="principles-title">
+          <div>
+            <p className="eyebrow">Operating principles</p>
+            <h2 id="principles-title">How I try to make the work easier to trust.</h2>
+          </div>
+          <ol>
+            {operatingPrinciples.map((principle) => (
+              <li key={principle}>{principle}</li>
+            ))}
+          </ol>
         </section>
 
         <section className="sectionShell" id="stack" aria-labelledby="stack-title">
@@ -500,7 +605,7 @@ ops: Docker + AWS/EKS + health checks`}</pre>
           </div>
         </section>
 
-        <section className="proofBand" aria-label="Proof points">
+        <section className="proofBand" id="proof-points" aria-label="Proof points">
           <article>
             <BadgeCheck size={24} />
             <h3>Remote communication</h3>
