@@ -901,13 +901,14 @@ h3 {
 
 .timeline {
   position: relative;
+  --timeline-marker-left: 205px;
 }
 
 .timeline::before {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 116px;
+  left: var(--timeline-marker-left);
   width: 1px;
   content: "";
   background: rgba(18, 22, 17, 0.22);
@@ -926,7 +927,7 @@ h3 {
 .timelineItem::before {
   position: absolute;
   top: 28px;
-  left: 110px;
+  left: calc(var(--timeline-marker-left) - 6px);
   width: 13px;
   aspect-ratio: 1;
   content: "";
