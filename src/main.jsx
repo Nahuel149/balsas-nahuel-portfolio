@@ -40,6 +40,7 @@ const links = {
   scoutboard: "https://github.com/Nahuel149/scoutboard-ai",
   autoresearch: "https://github.com/Nahuel149/autoresearch-rtx3070",
   copaKahl: "https://copa-kahl.onrender.com/",
+  smartWifi: "https://smartwifiaccess.com/",
 };
 
 const stats = [
@@ -193,12 +194,12 @@ const projectAtlas = [
   {
     eyebrow: "Remote web development",
     title: "Smart Wifi Access",
-    type: "Contract work",
+    type: "Contract work, live site",
     summary:
       "Web application work focused on performance, retention, PWA behavior, WebAssembly, server-side rendering, frontend optimization, and ecommerce usability.",
-    proof: "Resume-backed contract experience. No private client files published.",
+    proof: "Live product site plus resume-backed contract experience. No private client files published.",
     tags: ["PWA", "WebAssembly", "SSR", "Frontend optimization", "Ecommerce UX"],
-    href: links.linkedin,
+    href: links.smartWifi,
     icon: Globe2,
   },
   {
