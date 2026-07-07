@@ -901,7 +901,8 @@ h3 {
 
 .timeline {
   position: relative;
-  --timeline-marker-left: 205px;
+  --timeline-marker-left: 16px;
+  padding-left: 34px;
 }
 
 .timeline::before {
@@ -927,7 +928,7 @@ h3 {
 .timelineItem::before {
   position: absolute;
   top: 28px;
-  left: calc(var(--timeline-marker-left) - 6px);
+  left: -24px;
   width: 13px;
   aspect-ratio: 1;
   content: "";
