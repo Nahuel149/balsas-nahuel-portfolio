@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;500;700;800&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;500;700;800&family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Noto+Sans+JP:wght@400;500;700;800&display=swap");
 
 :root {
   --void: #090b09;
@@ -65,7 +65,7 @@ a {
   top: 0;
   z-index: 20;
   display: grid;
-  grid-template-columns: minmax(210px, 1fr) auto 48px;
+  grid-template-columns: minmax(210px, 1fr) auto auto 48px;
   gap: 22px;
   align-items: center;
   min-height: 72px;
@@ -135,6 +135,58 @@ a {
 
 .iconButton:hover {
   transform: translateY(-2px);
+}
+
+.languageSwitch {
+  display: inline-flex;
+  min-height: 42px;
+  border: 1px solid rgba(255, 250, 240, 0.22);
+}
+
+.languageSwitch button {
+  min-width: 42px;
+  padding: 0 10px;
+  border: 0;
+  border-right: 1px solid rgba(255, 250, 240, 0.18);
+  background: transparent;
+  color: var(--mist);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.72rem;
+  font-weight: 800;
+  transition: background 160ms ease, color 160ms ease;
+}
+
+.languageSwitch button:last-child {
+  border-right: 0;
+}
+
+.languageSwitch button:hover,
+.languageSwitch button:focus-visible {
+  background: rgba(183, 255, 60, 0.08);
+  color: var(--acid);
+  outline: none;
+}
+
+.languageSwitch button.isActive {
+  background: var(--acid);
+  color: var(--void);
+}
+
+html[lang="ja"] body {
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+
+html[lang="ja"] h1,
+html[lang="ja"] h2 {
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  font-weight: 800;
+  line-height: 1.16;
+}
+
+html[lang="ja"] .eyebrow,
+html[lang="ja"] .languageSwitch button {
+  font-family: "Azeret Mono", "Noto Sans JP", monospace;
 }
 
 main {
@@ -1099,7 +1151,7 @@ h3 {
   }
 
   .siteHeader {
-    grid-template-columns: 1fr 42px;
+    grid-template-columns: 1fr auto 42px;
     gap: 12px;
     min-height: 64px;
     padding: 0 14px;
