@@ -443,11 +443,117 @@ const japanese = {
     text: "フルスタック開発、バックエンド寄りのプロダクト開発、QA/デバッグ支援、データ量の多いダッシュボード、技術リサーチ、公開可能なポートフォリオ作成を得意としています。",
     email: "メール",
   },
+  accessibility: { nav: "主要ナビゲーション", home: "Nahuel Balsas ホーム", language: "言語を選択", signal: "現在の仕事の概要", stats: "ポートフォリオのハイライト", routes: "実績ナビゲーター", routeTitle: "役割に合う実績を選んでください。", caseNotes: "D-Unitのビルドノート", caseDetails: "D-Unit ケーススタディ詳細", proof: "実績ポイント" },
+};
+
+const spanish = {
+  nav: ["Proyectos", "Atlas", "Stack", "Experiencia", "Contacto"],
+  stats: ["commits registrados en D-Unit", "registros de despliegue", "idiomas de trabajo", "horario listo para remoto"],
+  hero: {
+    eyebrow: "desarrollador full-stack basado en Kioto",
+    lead: "Construyo interfaces SaaS prácticas, APIs de backend, flujos de datos y funcionalidades de producto con foco en QA para equipos que necesitan ejecución confiable en contextos de inglés, español y japonés escrito.",
+    explore: "Ver proyectos",
+    available: "Disponible para trabajo de producto remoto y en Japón",
+    signal: "Full-stack + QA + investigación",
+  },
+  intro: { eyebrow: "Perfil de trabajo", title: "Disciplina de desarrollador con mirada de tester." },
+  focus: [
+    ["Productos full-stack", "React, TypeScript, FastAPI, Java/Spring, dashboards, APIs, autenticación, pagos y funcionalidades orientadas al producto."],
+    ["Entrega con mentalidad de QA", "Playwright, Vitest, Testing Library, pytest, reportes de bugs estilo Jira, controles de regresión y pasos claros para reproducir problemas."],
+    ["Datos e integraciones", "MongoDB, MySQL, Meta Graph API, OpenAI, MailerLite, MercadoPago, validaciones de datos, reportes e investigación respaldada por fuentes."],
+  ],
+  routes: [
+    ["SaaS full-stack", "Empezar por D-Unit", "La mejor señal para React, FastAPI, integraciones, autenticación, pagos, despliegue y debugging de producto."],
+    ["QA / testing", "Ver el alcance de QA", "La mejor señal para reportes de bugs, regresión, QA de localización, Playwright, pytest y pasos de reproducción listos para desarrollo."],
+    ["Datos / flujos de IA", "Abrir ScoutBoard", "La mejor señal para seguimiento de fuentes, reglas de validación, flujos de reporte, analítica de fútbol y código TypeScript público."],
+    ["Redacción / investigación", "Ver muestras", "La mejor señal para resúmenes con fuentes, edición de borradores de IA, muestras en japonés y controles de entrega cuidadosos."],
+  ],
+  work: { eyebrow: "Trabajo seleccionado", title: "Señales de portfolio que puedo mostrar con seguridad." },
+  projects: [
+    ["Caso de estudio principal", "Desarrollador SaaS full-stack", "Plataforma SaaS de analítica para negocios digitales, con dashboards, integraciones con Meta, insights asistidos por IA, automatización de marketing, facturación por suscripción, middleware de seguridad y despliegues.", "Ver producto público"],
+    ["Prueba de código público", "App de portfolio para investigación de fútbol y QA de datos", "Aplicación propia que transforma datos de ejemplo de fútbol en validaciones, pantallas analíticas y evidencia para reportes sin usar material privado de clientes.", "Abrir repositorio"],
+    ["Diseño de producto en vivo", "App de pronósticos del Mundial 2026", "Aplicación de prode desplegada con tablas de posiciones, flujos de pronósticos, reglas, vista de campeones, carga de resultados por administración, comentarios, compartir y exportación de imágenes.", "Abrir app"],
+    ["Prueba de QA y redacción", "QA de localización, resúmenes de fuentes y edición", "Evidencia reutilizable de QA de juegos, investigación técnica, limpieza de borradores de IA y documentación para clientes basada en ejemplos seguros para publicar.", "Ver perfil de GitHub"],
+  ],
+  atlas: { eyebrow: "Atlas de proyectos", title: "Más del trabajo sobre el que puedo hablar públicamente.", reference: "Referencia" },
+  atlasProjects: [
+    ["SaaS full-stack", "Código privado, página pública del producto", "SaaS de analítica para negocios digitales. Trabajé en dashboards, servicios FastAPI, integraciones con Meta, chat con IA, pagos, middleware de seguridad, pruebas, Docker y despliegues en AWS/EKS.", "Página pública, historial privado de GitHub, notas de arquitectura, 177 commits registrados y 94 registros de despliegue."],
+    ["App pública de portfolio", "Repositorio de código seguro para publicar", "App de investigación de fútbol y QA de datos con políticas de fuentes, reglas de validación, páginas de analítica, vistas previas de reportes y documentación de flujo de trabajo.", "Aplicación Next.js, pruebas, scripts de build, datos de ejemplo, reportes públicos y flujo de seguimiento de fuentes."],
+    ["Producto deportivo en vivo", "App desplegada en Render", "Juego de pronósticos del Mundial 2026 para amigos o grupos, con posiciones de participantes, puntuación de marcadores y eliminatorias, reglas, vista de campeones, comentarios, compartir e imágenes descargables.", "Despliegue de Render revisado en rutas públicas de tabla, pronósticos, reglas, campeones, administración, comentarios, compartir y descarga de imágenes."],
+    ["Experimentación de ML", "Fork público de GitHub", "Adaptación local de autoresearch para un entorno Windows/RTX 3070. Sirve como evidencia de experimentación con agentes de IA, configuración de Python y curiosidad por flujos de investigación.", "Fork bajo Nahuel149 con trabajo de ramas locales."],
+    ["Desarrollo web remoto", "Trabajo contratado, sitio en vivo", "Trabajo de aplicación web enfocado en rendimiento, comportamiento PWA, WebAssembly, renderizado del lado del servidor, optimización de frontend y usabilidad de ecommerce.", "Sitio de producto en vivo y experiencia de contrato respaldada por CV. No se publican archivos privados de clientes."],
+    ["Desarrollo empresarial", "Experiencia profesional", "Trabajo con Java/Spring para sistemas financieros empresariales, incluyendo tareas de base de datos, pruebas con JUnit/Mockito, pruebas funcionales y end-to-end.", "Experiencia laboral respaldada por CV. Los detalles específicos de clientes no son públicos."],
+    ["QA de localización de juegos", "Experiencia profesional de QA", "QA de localización para juegos móviles y de consola con inglés-español, español-inglés y referencia de fuentes japonesas. Incluye PS5, iOS, Android, reportes Jira, regresión, smoke tests y seguimiento de builds.", "Resumen del rol seguro para NDA y muestra ficticia de reporte de bug."],
+    ["Operador de ecommerce", "Negocio independiente", "Gestioné un negocio de ecommerce de productos digitales con marketing online en redes sociales. Esto aporta criterio de producto, comunicación con clientes, ventas e inventario, y operación de pequeños negocios.", "Cronología y experiencia independiente respaldadas por CV."],
+    ["Muestras de redacción y QA", "Muestras propias", "Muestras seguras para NDA de reportes de bugs, resúmenes de investigación con fuentes, limpieza de borradores de IA y artículos locales de Kioto. Son muestras, no entregas de clientes.", "Muestras Markdown locales y notas de portfolio seguras para publicar."],
+  ],
+  caseStudy: {
+    eyebrow: "Resumen del caso de estudio",
+    title: "D-Unit conectó analítica de producto, asistencia de IA, facturación y operaciones.",
+    text: "Mi trabajo abarcó dashboards en React, servicios FastAPI, flujos de datos MongoDB/MySQL, integraciones de Meta y MercadoPago, chat IA/RAG, automatización de marketing, control de rutas, health checks y cobertura de pruebas.",
+    cta: "Abrir D-Unit",
+    notes: "notas de build",
+  },
+  caseDetails: [
+    ["Confiabilidad de integraciones", "Depuré estados de conexión Meta/OAuth, comportamiento de tokens, flujos de reconexión, sincronización manual, manejo de respuestas de API y desajustes de permisos."],
+    ["Flujo de IA y reportes", "Construí el comportamiento de chat IA alrededor de historial de conversaciones, actualización de contexto, feedback, recuperación respaldada por MongoDB, flujos de reportes y revisión humana."],
+    ["Seguridad y operaciones", "Trabajé con verificaciones CSRF, headers de seguridad, middleware de gateway, registros de rate limiting, alertas de amenazas, seguimiento de costos, colecciones con índices TTL y health checks."],
+    ["Disciplina de pruebas", "Usé Vitest, Testing Library, Playwright, pytest y controles de regresión en autenticación, pagos, integraciones Meta, automatización y contexto de chat IA."],
+  ],
+  qa: {
+    eyebrow: "Alcance de QA",
+    title: "El testing de juegos me enseñó a escribir bugs que desarrollo puede usar de verdad.",
+    text: "Mi experiencia de QA acompaña mi trabajo de desarrollo. Cuando algo falla, pienso en el estado de usuario, número de build, locale, plataforma, logs, comportamiento esperado y riesgo de regresión.",
+    facts: [
+      "QA de localización en español e inglés, con referencia de fuente japonesa cuando hace falta.",
+      "Los títulos que puedo mencionar incluyen Dead Space, Sword Art Online Variant Showdown, Exoprimal y Street Fighter 6.",
+      "Reporté problemas de localización, truncado, superposición de UI, placeholders, terminología, crashes/logs y claridad de gameplay.",
+      "Usé pasos reproducibles, resultados reales y esperados, evidencia, detalles de build/plataforma/idioma y notas de regresión.",
+    ],
+  },
+  principles: {
+    eyebrow: "Principios de trabajo",
+    title: "Cómo intento que el trabajo sea más fácil de confiar.",
+    items: ["Preguntar temprano cuando el comportamiento esperado no está claro.", "Mantener datos privados de clientes fuera de la evidencia pública.", "Escribir bugs con suficiente detalle para que otra persona pueda reproducirlos.", "Usar IA como apoyo para borradores y luego verificar fuentes y editar manualmente.", "Preferir lanzamientos pequeños y verificados antes que afirmaciones grandes."],
+  },
+  stack: { eyebrow: "Matriz de stack", title: "Herramientas que puedo conectar en un flujo real de producto.", groups: ["Frontend", "Backend", "Datos", "Testing", "Operaciones", "Flujo de trabajo"] },
+  credentials: {
+    eyebrow: "Trayectoria",
+    title: "Las partes fuera del código también importan.",
+    items: [
+      ["Educación", ["Universidad de Buenos Aires", "Licenciatura en Contabilidad / orientación CPA"]],
+      ["Certificaciones", ["Cambridge English First Certificate Exam", "Especialista certificado en Analítica y Datos", "Especialista certificado en Email Marketing", "Especialista certificado en Ecommerce Marketing", "Especialista certificado en Adquisición de Clientes"]],
+      ["Idiomas", ["Español nativo", "Inglés fluido", "Japonés: conversación simple y comunicación laboral escrita más sólida"]],
+    ],
+  },
+  timeline: {
+    eyebrow: "Recorrido profesional",
+    title: "Software, QA y soporte de producto desde múltiples ángulos.",
+    items: [
+      ["Proyecto SaaS full-stack D-Unit", "Construí en frontend, backend, integraciones, pruebas, middleware de seguridad, documentación y flujos de despliegue."],
+      ["Desarrollo web Smart Wifi Access", "Entregué trabajo de aplicación web sobre rendimiento, PWA, WebAssembly, renderizado del lado del servidor y usabilidad."],
+      ["QA de localización en Keywords Studios Tokyo", "Probé juegos móviles y de consola con reportes Jira, regresión, seguimiento de builds y LQA inglés-español."],
+      ["Desarrollo Java/Spring en IBM", "Implementé funcionalidades empresariales, tareas de base de datos, pruebas unitarias y pruebas funcionales/end-to-end para sistemas financieros."],
+    ],
+  },
+  proof: [
+    ["Comunicación remota", "Actualizaciones escritas claras, preguntas tempranas, documentación, flujo de GitHub y resúmenes listos para stakeholders."],
+    ["Redacción con fuentes", "Resúmenes de investigación técnica, muestras de reescritura/corrección y borradores de reportes con puntos de revisión humana."],
+    ["IA usada con cuidado", "La asistencia de IA se trata como apoyo de borrador, con verificación de fuentes, edición manual y reglas de entrega antes del resultado final."],
+    ["Alcance multilingüe", "Inglés y español fluidos, más comunicación laboral escrita en japonés para especificaciones, tickets e instrucciones."],
+  ],
+  contact: {
+    eyebrow: "Contacto",
+    title: "Para equipos de producto que necesitan implementación y verificación.",
+    text: "Mi mejor encaje: desarrollo full-stack, trabajo de producto orientado a backend, soporte de QA/debugging, dashboards con muchos datos, investigación técnica y trabajo de portfolio seguro para publicar.",
+    email: "Email",
+  },
+  accessibility: { nav: "Navegación principal", home: "Inicio de Nahuel Balsas", language: "Elegir idioma", signal: "Señal actual de trabajo", stats: "Destacados del portfolio", routes: "Navegador de evidencia", routeTitle: "Elegí el recorrido que coincida con el rol.", caseNotes: "Notas de build de D-Unit", caseDetails: "Detalles del caso de estudio de D-Unit", proof: "Puntos de evidencia" },
 };
 
 function App() {
   const [language, setLanguage] = useState(() => window.localStorage.getItem("portfolio-language") || "en");
-  const isJapanese = language === "ja";
+  const languageContent = language === "ja" ? japanese : language === "es" ? spanish : null;
 
   useEffect(() => {
     window.localStorage.setItem("portfolio-language", language);
@@ -459,50 +565,51 @@ function App() {
   };
 
   const localizedFocus = focus.map((item, index) =>
-    isJapanese ? { ...item, title: japanese.focus[index][0], text: japanese.focus[index][1] } : item,
+    languageContent ? { ...item, title: languageContent.focus[index][0], text: languageContent.focus[index][1] } : item,
   );
   const localizedRoutes = proofRoutes.map((item, index) =>
-    isJapanese
-      ? { ...item, label: japanese.routes[index][0], title: japanese.routes[index][1], text: japanese.routes[index][2] }
+    languageContent
+      ? { ...item, label: languageContent.routes[index][0], title: languageContent.routes[index][1], text: languageContent.routes[index][2] }
       : item,
   );
   const localizedProjects = projects.map((item, index) =>
-    isJapanese
-      ? { ...item, eyebrow: japanese.projects[index][0], role: japanese.projects[index][1], summary: japanese.projects[index][2], cta: japanese.projects[index][3] }
+    languageContent
+      ? { ...item, eyebrow: languageContent.projects[index][0], role: languageContent.projects[index][1], summary: languageContent.projects[index][2], cta: languageContent.projects[index][3] }
       : item,
   );
   const localizedAtlas = projectAtlas.map((item, index) =>
-    isJapanese
-      ? { ...item, eyebrow: japanese.atlasProjects[index][0], type: japanese.atlasProjects[index][1], summary: japanese.atlasProjects[index][2], proof: japanese.atlasProjects[index][3] }
+    languageContent
+      ? { ...item, eyebrow: languageContent.atlasProjects[index][0], type: languageContent.atlasProjects[index][1], summary: languageContent.atlasProjects[index][2], proof: languageContent.atlasProjects[index][3] }
       : item,
   );
   const localizedCaseDetails = caseStudyDetails.map((item, index) =>
-    isJapanese ? { ...item, title: japanese.caseDetails[index][0], text: japanese.caseDetails[index][1] } : item,
+    languageContent ? { ...item, title: languageContent.caseDetails[index][0], text: languageContent.caseDetails[index][1] } : item,
   );
   const localizedCredentials = credentials.map((item, index) =>
-    isJapanese ? { ...item, title: japanese.credentials.items[index][0], lines: japanese.credentials.items[index][1] } : item,
+    languageContent ? { ...item, title: languageContent.credentials.items[index][0], lines: languageContent.credentials.items[index][1] } : item,
   );
   const localizedTimeline = timeline.map((item, index) =>
-    isJapanese ? { ...item, title: japanese.timeline.items[index][0], text: japanese.timeline.items[index][1] } : item,
+    languageContent ? { ...item, title: languageContent.timeline.items[index][0], text: languageContent.timeline.items[index][1] } : item,
   );
 
   return (
     <>
-      <header className="siteHeader" aria-label={isJapanese ? "主要ナビゲーション" : "Primary navigation"}>
-        <a className="brand" href="#top" aria-label={isJapanese ? "Nahuel Balsas ホーム" : "Nahuel Balsas home"}>
+      <header className="siteHeader" aria-label={languageContent ? languageContent.accessibility.nav : "Primary navigation"}>
+        <a className="brand" href="#top" aria-label={languageContent ? languageContent.accessibility.home : "Nahuel Balsas home"}>
           <span className="brandMark">NB</span>
           <span>Nahuel Balsas</span>
         </a>
         <nav>
-          <a href="#work">{isJapanese ? japanese.nav[0] : "Work"}</a>
-          <a href="#atlas">{isJapanese ? japanese.nav[1] : "Atlas"}</a>
-          <a href="#stack">{isJapanese ? japanese.nav[2] : "Stack"}</a>
-          <a href="#timeline">{isJapanese ? japanese.nav[3] : "Timeline"}</a>
-          <a href="#contact">{isJapanese ? japanese.nav[4] : "Contact"}</a>
+          <a href="#work">{languageContent ? languageContent.nav[0] : "Work"}</a>
+          <a href="#atlas">{languageContent ? languageContent.nav[1] : "Atlas"}</a>
+          <a href="#stack">{languageContent ? languageContent.nav[2] : "Stack"}</a>
+          <a href="#timeline">{languageContent ? languageContent.nav[3] : "Timeline"}</a>
+          <a href="#contact">{languageContent ? languageContent.nav[4] : "Contact"}</a>
         </nav>
-        <div className="languageSwitch" aria-label={isJapanese ? "言語を選択" : "Choose language"}>
-          <button type="button" className={!isJapanese ? "isActive" : ""} aria-pressed={!isJapanese} onClick={() => setLocale("en")}>EN</button>
-          <button type="button" className={isJapanese ? "isActive" : ""} aria-pressed={isJapanese} onClick={() => setLocale("ja")}>日本語</button>
+        <div className="languageSwitch" aria-label={languageContent ? languageContent.accessibility.language : "Choose language"}>
+          <button type="button" className={language === "en" ? "isActive" : ""} aria-pressed={language === "en"} onClick={() => setLocale("en")}>EN</button>
+          <button type="button" className={language === "es" ? "isActive" : ""} aria-pressed={language === "es"} onClick={() => setLocale("es")}>ES</button>
+          <button type="button" className={language === "ja" ? "isActive" : ""} aria-pressed={language === "ja"} onClick={() => setLocale("ja")}>日本語</button>
         </div>
         <a className="iconButton" href={links.github} target="_blank" rel="noreferrer" aria-label="GitHub profile">
           <Github size={19} />
@@ -514,14 +621,14 @@ function App() {
           <div className="heroGrid" aria-hidden="true" />
           <img className="heroPortrait" src="./nahuel-balsas.jpg" alt="" />
           <div className="heroCopy">
-            <p className="eyebrow">{isJapanese ? japanese.hero.eyebrow : "Kyoto based full-stack developer"}</p>
+            <p className="eyebrow">{languageContent ? languageContent.hero.eyebrow : "Kyoto based full-stack developer"}</p>
             <h1 id="hero-title">Nahuel Balsas</h1>
             <p className="heroLead">
-              {isJapanese ? japanese.hero.lead : "I build practical SaaS interfaces, backend APIs, data workflows, and QA-heavy product features for teams that need reliable execution across English, Spanish, and written Japanese contexts."}
+              {languageContent ? languageContent.hero.lead : "I build practical SaaS interfaces, backend APIs, data workflows, and QA-heavy product features for teams that need reliable execution across English, Spanish, and written Japanese contexts."}
             </p>
             <div className="heroActions" aria-label="Main links">
               <a className="primaryButton" href="#work">
-                <span>{isJapanese ? japanese.hero.explore : "Explore work"}</span>
+                <span>{languageContent ? languageContent.hero.explore : "Explore work"}</span>
                 <ArrowRight size={18} />
               </a>
               <a className="secondaryButton" href={links.linkedin} target="_blank" rel="noreferrer">
@@ -530,28 +637,28 @@ function App() {
               </a>
             </div>
           </div>
-          <div className="signalPanel" aria-label={isJapanese ? "現在の仕事の概要" : "Current work signal"}>
+          <div className="signalPanel" aria-label={languageContent ? languageContent.accessibility.signal : "Current work signal"}>
             <div>
               <span className="signalDot" />
-              <span>{isJapanese ? japanese.hero.available : "Available for remote and Japan-based product work"}</span>
+              <span>{languageContent ? languageContent.hero.available : "Available for remote and Japan-based product work"}</span>
             </div>
-            <strong>{isJapanese ? japanese.hero.signal : "Full-stack + QA + research"}</strong>
+            <strong>{languageContent ? languageContent.hero.signal : "Full-stack + QA + research"}</strong>
           </div>
         </section>
 
-        <section className="statRail" aria-label={isJapanese ? "ポートフォリオのハイライト" : "Portfolio highlights"}>
-          {stats.map(([value, label]) => (
+        <section className="statRail" aria-label={languageContent ? languageContent.accessibility.stats : "Portfolio highlights"}>
+          {stats.map(([value, label], index) => (
             <article className="statTile" key={label}>
               <strong>{value}</strong>
-              <span>{isJapanese ? japanese.stats[stats.findIndex((item) => item[1] === label)] : label}</span>
+              <span>{languageContent ? languageContent.stats[index] : label}</span>
             </article>
           ))}
         </section>
 
         <section className="sectionShell introShell" aria-labelledby="intro-title">
           <div className="sectionIntro">
-            <p className="eyebrow">{isJapanese ? japanese.intro.eyebrow : "Working profile"}</p>
-            <h2 id="intro-title">{isJapanese ? japanese.intro.title : "Developer discipline with a tester's eye."}</h2>
+            <p className="eyebrow">{languageContent ? languageContent.intro.eyebrow : "Working profile"}</p>
+            <h2 id="intro-title">{languageContent ? languageContent.intro.title : "Developer discipline with a tester's eye."}</h2>
           </div>
           <div className="focusGrid">
             {localizedFocus.map((item) => {
@@ -571,8 +678,8 @@ function App() {
           <div className="routeIntro">
             <Route size={24} aria-hidden="true" />
             <div>
-              <p className="eyebrow">{isJapanese ? "実績ナビゲーター" : "Proof navigator"}</p>
-              <h2 id="route-title">{isJapanese ? "役割に合う実績を選んでください。" : "Pick the track that matches the role."}</h2>
+              <p className="eyebrow">{languageContent ? languageContent.accessibility.routes : "Proof navigator"}</p>
+              <h2 id="route-title">{languageContent ? languageContent.accessibility.routeTitle : "Pick the track that matches the role."}</h2>
             </div>
           </div>
           <div className="routeGrid">
@@ -592,8 +699,8 @@ function App() {
 
         <section className="sectionShell workShell" id="work" aria-labelledby="work-title">
           <div className="sectionIntro">
-            <p className="eyebrow">{isJapanese ? japanese.work.eyebrow : "Selected work"}</p>
-            <h2 id="work-title">{isJapanese ? japanese.work.title : "Portfolio signals that are safe to show."}</h2>
+            <p className="eyebrow">{languageContent ? languageContent.work.eyebrow : "Selected work"}</p>
+            <h2 id="work-title">{languageContent ? languageContent.work.title : "Portfolio signals that are safe to show."}</h2>
           </div>
           <div className="projectGrid">
             {localizedProjects.map((project) => {
@@ -628,8 +735,8 @@ function App() {
 
         <section className="sectionShell atlasShell" id="atlas" aria-labelledby="atlas-title">
           <div className="sectionIntro">
-            <p className="eyebrow">{isJapanese ? japanese.atlas.eyebrow : "Project atlas"}</p>
-            <h2 id="atlas-title">{isJapanese ? japanese.atlas.title : "More of the work I can safely talk about."}</h2>
+            <p className="eyebrow">{languageContent ? languageContent.atlas.eyebrow : "Project atlas"}</p>
+            <h2 id="atlas-title">{languageContent ? languageContent.atlas.title : "More of the work I can safely talk about."}</h2>
           </div>
           <div className="atlasGrid">
             {localizedAtlas.map((project) => {
@@ -652,7 +759,7 @@ function App() {
                     ))}
                   </ul>
                   <a className="textLink" href={project.href} target="_blank" rel="noreferrer">
-                      <span>{isJapanese ? japanese.atlas.reference : "Reference"}</span>
+                      <span>{languageContent ? languageContent.atlas.reference : "Reference"}</span>
                     <ExternalLink size={16} />
                   </a>
                 </article>
@@ -663,18 +770,18 @@ function App() {
 
         <section className="caseBand" id="case-study" aria-labelledby="case-title">
           <div className="caseCopy">
-            <p className="eyebrow">{isJapanese ? japanese.caseStudy.eyebrow : "Case study snapshot"}</p>
-            <h2 id="case-title">{isJapanese ? japanese.caseStudy.title : "D-Unit connected product analytics, AI assistance, billing, and operations."}</h2>
+            <p className="eyebrow">{languageContent ? languageContent.caseStudy.eyebrow : "Case study snapshot"}</p>
+            <h2 id="case-title">{languageContent ? languageContent.caseStudy.title : "D-Unit connected product analytics, AI assistance, billing, and operations."}</h2>
             <p>
-              {isJapanese ? japanese.caseStudy.text : "My work covered React dashboards, FastAPI services, MongoDB/MySQL data flows, Meta and MercadoPago integrations, AI/RAG chat behavior, marketing automation, route gating, health checks, and test coverage."}
+              {languageContent ? languageContent.caseStudy.text : "My work covered React dashboards, FastAPI services, MongoDB/MySQL data flows, Meta and MercadoPago integrations, AI/RAG chat behavior, marketing automation, route gating, health checks, and test coverage."}
             </p>
             <a className="primaryButton dark" href={links.dunit} target="_blank" rel="noreferrer">
               <Globe2 size={18} />
-              <span>{isJapanese ? japanese.caseStudy.cta : "Open D-Unit"}</span>
+              <span>{languageContent ? languageContent.caseStudy.cta : "Open D-Unit"}</span>
             </a>
           </div>
-          <div className="caseConsole" aria-label={isJapanese ? "D-Unitのビルドノート" : "D-Unit build notes"}>
-            <div><Terminal size={18} /> {isJapanese ? japanese.caseStudy.notes : "build notes"}</div>
+          <div className="caseConsole" aria-label={languageContent ? languageContent.accessibility.caseNotes : "D-Unit build notes"}>
+            <div><Terminal size={18} /> {languageContent ? languageContent.caseStudy.notes : "build notes"}</div>
             <pre>{`frontend: React + TypeScript + Vite
 backend: FastAPI + Python
 data: MongoDB + MySQL
@@ -683,7 +790,7 @@ ops: Docker + AWS/EKS + health checks`}</pre>
           </div>
         </section>
 
-        <section className="caseDetailShell" aria-label={isJapanese ? "D-Unit ケーススタディ詳細" : "D-Unit case study details"}>
+        <section className="caseDetailShell" aria-label={languageContent ? languageContent.accessibility.caseDetails : "D-Unit case study details"}>
           {localizedCaseDetails.map((item) => (
             <article className="caseDetailCard" key={item.title}>
               <CheckCircle2 size={20} aria-hidden="true" />
@@ -695,14 +802,14 @@ ops: Docker + AWS/EKS + health checks`}</pre>
 
         <section className="qaBand" id="qa-range" aria-labelledby="qa-title">
           <div>
-            <p className="eyebrow">{isJapanese ? japanese.qa.eyebrow : "QA range"}</p>
-            <h2 id="qa-title">{isJapanese ? japanese.qa.title : "Game testing taught me to write bugs developers can actually use."}</h2>
+            <p className="eyebrow">{languageContent ? languageContent.qa.eyebrow : "QA range"}</p>
+            <h2 id="qa-title">{languageContent ? languageContent.qa.title : "Game testing taught me to write bugs developers can actually use."}</h2>
             <p>
-              {isJapanese ? japanese.qa.text : "My QA background sits next to my development work. That matters: when something breaks, I think about user state, build number, locale, platform, logs, expected behavior, and regression risk."}
+              {languageContent ? languageContent.qa.text : "My QA background sits next to my development work. That matters: when something breaks, I think about user state, build number, locale, platform, logs, expected behavior, and regression risk."}
             </p>
           </div>
           <div className="qaList">
-            {(isJapanese ? japanese.qa.facts : qaFacts).map((fact) => (
+            {(languageContent ? languageContent.qa.facts : qaFacts).map((fact) => (
               <article key={fact}>
                 <TestTubeDiagonal size={18} />
                 <span>{fact}</span>
@@ -713,11 +820,11 @@ ops: Docker + AWS/EKS + health checks`}</pre>
 
         <section className="principlesBand" aria-labelledby="principles-title">
           <div>
-            <p className="eyebrow">{isJapanese ? japanese.principles.eyebrow : "Operating principles"}</p>
-            <h2 id="principles-title">{isJapanese ? japanese.principles.title : "How I try to make the work easier to trust."}</h2>
+            <p className="eyebrow">{languageContent ? languageContent.principles.eyebrow : "Operating principles"}</p>
+            <h2 id="principles-title">{languageContent ? languageContent.principles.title : "How I try to make the work easier to trust."}</h2>
           </div>
           <ol>
-            {(isJapanese ? japanese.principles.items : operatingPrinciples).map((principle) => (
+            {(languageContent ? languageContent.principles.items : operatingPrinciples).map((principle) => (
               <li key={principle}>{principle}</li>
             ))}
           </ol>
@@ -725,13 +832,13 @@ ops: Docker + AWS/EKS + health checks`}</pre>
 
         <section className="sectionShell" id="stack" aria-labelledby="stack-title">
           <div className="sectionIntro">
-            <p className="eyebrow">{isJapanese ? japanese.stack.eyebrow : "Stack matrix"}</p>
-            <h2 id="stack-title">{isJapanese ? japanese.stack.title : "Tools I can connect into actual product flow."}</h2>
+            <p className="eyebrow">{languageContent ? languageContent.stack.eyebrow : "Stack matrix"}</p>
+            <h2 id="stack-title">{languageContent ? languageContent.stack.title : "Tools I can connect into actual product flow."}</h2>
           </div>
           <div className="stackMatrix">
             {stack.map(([group, ...items], index) => (
               <article className="stackRow" key={group}>
-                <h3>{isJapanese ? japanese.stack.groups[index] : group}</h3>
+                <h3>{languageContent ? languageContent.stack.groups[index] : group}</h3>
                 <div>
                   {items.map((item) => (
                     <span key={item}>{item}</span>
@@ -744,8 +851,8 @@ ops: Docker + AWS/EKS + health checks`}</pre>
 
         <section className="sectionShell credentialsShell" aria-labelledby="credentials-title">
           <div className="sectionIntro">
-            <p className="eyebrow">{isJapanese ? japanese.credentials.eyebrow : "Background"}</p>
-            <h2 id="credentials-title">{isJapanese ? japanese.credentials.title : "The non-code pieces still matter."}</h2>
+            <p className="eyebrow">{languageContent ? languageContent.credentials.eyebrow : "Background"}</p>
+            <h2 id="credentials-title">{languageContent ? languageContent.credentials.title : "The non-code pieces still matter."}</h2>
           </div>
           <div className="credentialGrid">
             {localizedCredentials.map((item) => {
@@ -767,8 +874,8 @@ ops: Docker + AWS/EKS + health checks`}</pre>
 
         <section className="sectionShell timelineShell" id="timeline" aria-labelledby="timeline-title">
           <div className="sectionIntro">
-            <p className="eyebrow">{isJapanese ? japanese.timeline.eyebrow : "Experience path"}</p>
-            <h2 id="timeline-title">{isJapanese ? japanese.timeline.title : "Software, QA, and product support from multiple angles."}</h2>
+            <p className="eyebrow">{languageContent ? languageContent.timeline.eyebrow : "Experience path"}</p>
+            <h2 id="timeline-title">{languageContent ? languageContent.timeline.title : "Software, QA, and product support from multiple angles."}</h2>
           </div>
           <div className="timeline">
             {localizedTimeline.map((item) => (
@@ -781,41 +888,41 @@ ops: Docker + AWS/EKS + health checks`}</pre>
           </div>
         </section>
 
-        <section className="proofBand" id="proof-points" aria-label={isJapanese ? "実績ポイント" : "Proof points"}>
+        <section className="proofBand" id="proof-points" aria-label={languageContent ? languageContent.accessibility.proof : "Proof points"}>
           <article>
             <BadgeCheck size={24} />
-            <h3>{isJapanese ? japanese.proof[0][0] : "Remote communication"}</h3>
-            <p>{isJapanese ? japanese.proof[0][1] : "Clear written updates, early questions, documentation, GitHub workflow, and stakeholder-ready summaries."}</p>
+            <h3>{languageContent ? languageContent.proof[0][0] : "Remote communication"}</h3>
+            <p>{languageContent ? languageContent.proof[0][1] : "Clear written updates, early questions, documentation, GitHub workflow, and stakeholder-ready summaries."}</p>
           </article>
           <article>
             <FileCheck2 size={24} />
-            <h3>{isJapanese ? japanese.proof[1][0] : "Source-backed writing"}</h3>
-            <p>{isJapanese ? japanese.proof[1][1] : "Technical research summaries, rewrite/proofreading samples, and report drafts with human review checkpoints."}</p>
+            <h3>{languageContent ? languageContent.proof[1][0] : "Source-backed writing"}</h3>
+            <p>{languageContent ? languageContent.proof[1][1] : "Technical research summaries, rewrite/proofreading samples, and report drafts with human review checkpoints."}</p>
           </article>
           <article>
             <Bot size={24} />
-            <h3>{isJapanese ? japanese.proof[2][0] : "AI used carefully"}</h3>
-            <p>{isJapanese ? japanese.proof[2][1] : "AI assistance is treated as draft support, with source checks, manual editing, and delivery rules before final output."}</p>
+            <h3>{languageContent ? languageContent.proof[2][0] : "AI used carefully"}</h3>
+            <p>{languageContent ? languageContent.proof[2][1] : "AI assistance is treated as draft support, with source checks, manual editing, and delivery rules before final output."}</p>
           </article>
           <article>
             <Layers3 size={24} />
-            <h3>{isJapanese ? japanese.proof[3][0] : "Multilingual range"}</h3>
-            <p>{isJapanese ? japanese.proof[3][1] : "Fluent English and Spanish, plus stronger written Japanese work communication for specs, tickets, and instructions."}</p>
+            <h3>{languageContent ? languageContent.proof[3][0] : "Multilingual range"}</h3>
+            <p>{languageContent ? languageContent.proof[3][1] : "Fluent English and Spanish, plus stronger written Japanese work communication for specs, tickets, and instructions."}</p>
           </article>
         </section>
 
         <section className="contactSection" id="contact" aria-labelledby="contact-title">
           <div>
-            <p className="eyebrow">{isJapanese ? japanese.contact.eyebrow : "Contact"}</p>
-            <h2 id="contact-title">{isJapanese ? japanese.contact.title : "For product teams that need implementation plus verification."}</h2>
+            <p className="eyebrow">{languageContent ? languageContent.contact.eyebrow : "Contact"}</p>
+            <h2 id="contact-title">{languageContent ? languageContent.contact.title : "For product teams that need implementation plus verification."}</h2>
             <p>
-              {isJapanese ? japanese.contact.text : "Best fit: full-stack development, backend-oriented product work, QA/debugging support, data-heavy dashboards, technical research, and public-safe portfolio work."}
+              {languageContent ? languageContent.contact.text : "Best fit: full-stack development, backend-oriented product work, QA/debugging support, data-heavy dashboards, technical research, and public-safe portfolio work."}
             </p>
           </div>
           <div className="contactActions">
             <a className="primaryButton" href={links.email}>
               <Mail size={18} />
-                <span>{isJapanese ? japanese.contact.email : "Email"}</span>
+                <span>{languageContent ? languageContent.contact.email : "Email"}</span>
             </a>
             <a className="secondaryButton light" href={links.github} target="_blank" rel="noreferrer">
               <Github size={18} />
