@@ -11,7 +11,7 @@ public profiles or public project pages.
 - Vite
 - React
 - Lucide icons
-- CSS modules through a single global stylesheet
+- Global CSS stylesheets
 - GitHub Pages deployment workflow
 
 ## Local Development
@@ -27,11 +27,20 @@ Open the local URL printed by Vite.
 
 ```powershell
 npm run build
+npm test
 ```
 
 The live GitHub Pages site is published from the committed `docs/` folder on
 `main`. After changing the site, run `npm run build`, refresh `docs/` from
 `dist/`, commit, and push.
+
+The build generates 12 prerendered HTML pages, including Spanish/Japanese routes
+and translated case studies, plus `sitemap.xml`. Client hydration uses the same
+components as the static build. Run `npm run preview` to inspect the production
+site locally at `/balsas-nahuel-portfolio/`.
+
+See [SEARCH_VISIBILITY.md](SEARCH_VISIBILITY.md) for Search Console owner setup,
+profile recommendations, measurement boundaries, and custom-domain notes.
 
 ## GitHub Project Refresh
 

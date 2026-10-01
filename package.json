@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
-    "build": "vite build",
+    "build": "vite build && vite build --ssr src/main.jsx --outDir .prerender && node scripts/prerender.mjs",
+    "test": "node --test tests/site.test.mjs",
     "preview": "vite preview --host 127.0.0.1",
     "lint": "eslint src"
   },

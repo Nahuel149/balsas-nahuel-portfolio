@@ -1,5 +1,8 @@
 node_modules/
 dist/
+.prerender/
+.playwright-cli/
+output/
 .env
 .env.*
 *.local

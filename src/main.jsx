@@ -1,5 +1,3 @@
-import React, { useEffect, useState } from "react";
-import { createRoot } from "react-dom/client";
 import {
   ArrowRight,
   BadgeCheck,
@@ -31,7 +29,11 @@ import {
   Trophy,
 } from "lucide-react";
 import "./styles.css";
+import "./cases.css";
 import { getGithubProjects } from "./github-projects.js";
+import CaseStudy, { LanguageLinks } from "./CaseStudy.jsx";
+import { basePath, pagePath, profileCopy } from "./site.js";
+import { caseStudies } from "./case-studies.js";
 
 const links = {
   github: "https://github.com/Nahuel149/",
@@ -552,18 +554,10 @@ const spanish = {
   accessibility: { nav: "Navegación principal", home: "Inicio de Nahuel Balsas", language: "Elegir idioma", signal: "Señal actual de trabajo", stats: "Destacados del portfolio", routes: "Navegador de evidencia", routeTitle: "Elegí el recorrido que coincida con el rol.", caseNotes: "Notas de build de D-Unit", caseDetails: "Detalles del caso de estudio de D-Unit", proof: "Puntos de evidencia" },
 };
 
-function App() {
-  const [language, setLanguage] = useState(() => window.localStorage.getItem("portfolio-language") || "en");
+function App({ language = "en", slug = "" }) {
   const languageContent = language === "ja" ? japanese : language === "es" ? spanish : null;
-
-  useEffect(() => {
-    window.localStorage.setItem("portfolio-language", language);
-    document.documentElement.lang = language;
-  }, [language]);
-
-  const setLocale = (nextLanguage) => {
-    setLanguage(nextLanguage);
-  };
+  const profile = profileCopy[language];
+  if (caseStudies.some((project) => project.slug === slug)) return <CaseStudy language={language} slug={slug} />;
 
   const localizedFocus = focus.map((item, index) =>
     languageContent ? { ...item, title: languageContent.focus[index][0], text: languageContent.focus[index][1] } : item,
@@ -595,6 +589,7 @@ function App() {
 
   return (
     <>
+      <a className="skipLink" href="#top">{language === "ja" ? "本文へ" : language === "es" ? "Ir al contenido" : "Skip to content"}</a>
       <header className="siteHeader" aria-label={languageContent ? languageContent.accessibility.nav : "Primary navigation"}>
         <a className="brand" href="#top" aria-label={languageContent ? languageContent.accessibility.home : "Nahuel Balsas home"}>
           <span className="brandMark">NB</span>
@@ -607,11 +602,7 @@ function App() {
           <a href="#timeline">{languageContent ? languageContent.nav[3] : "Timeline"}</a>
           <a href="#contact">{languageContent ? languageContent.nav[4] : "Contact"}</a>
         </nav>
-        <div className="languageSwitch" aria-label={languageContent ? languageContent.accessibility.language : "Choose language"}>
-          <button type="button" className={language === "en" ? "isActive" : ""} aria-pressed={language === "en"} onClick={() => setLocale("en")}>EN</button>
-          <button type="button" className={language === "es" ? "isActive" : ""} aria-pressed={language === "es"} onClick={() => setLocale("es")}>ES</button>
-          <button type="button" className={language === "ja" ? "isActive" : ""} aria-pressed={language === "ja"} onClick={() => setLocale("ja")}>日本語</button>
-        </div>
+        <LanguageLinks language={language} />
         <a className="iconButton" href={links.github} target="_blank" rel="noreferrer" aria-label="GitHub profile">
           <Github size={19} />
         </a>
@@ -620,12 +611,12 @@ function App() {
       <main id="top">
         <section className="hero" aria-labelledby="hero-title">
           <div className="heroGrid" aria-hidden="true" />
-          <img className="heroPortrait" src="./nahuel-balsas.jpg" alt="" />
+          <img className="heroPortrait" src={`${basePath}nahuel-balsas.jpg`} alt="" fetchPriority="high" />
           <div className="heroCopy">
             <p className="eyebrow">{languageContent ? languageContent.hero.eyebrow : "Kyoto based full-stack developer"}</p>
             <h1 id="hero-title">Nahuel Balsas</h1>
             <p className="heroLead">
-              {languageContent ? languageContent.hero.lead : "I build practical SaaS interfaces, backend APIs, data workflows, and QA-heavy product features for teams that need reliable execution across English, Spanish, and written Japanese contexts."}
+              {profile.lead}
             </p>
             <div className="heroActions" aria-label="Main links">
               <a className="primaryButton" href="#work">
@@ -641,9 +632,9 @@ function App() {
           <div className="signalPanel" aria-label={languageContent ? languageContent.accessibility.signal : "Current work signal"}>
             <div>
               <span className="signalDot" />
-              <span>{languageContent ? languageContent.hero.available : "Available for remote and Japan-based product work"}</span>
+              <span>{profile.availability}</span>
             </div>
-            <strong>{languageContent ? languageContent.hero.signal : "Full-stack + QA + research"}</strong>
+            <strong>{profile.role}</strong>
           </div>
         </section>
 
@@ -703,16 +694,19 @@ function App() {
             <p className="eyebrow">{languageContent ? languageContent.work.eyebrow : "Selected work"}</p>
             <h2 id="work-title">{languageContent ? languageContent.work.title : "Portfolio signals that are safe to show."}</h2>
           </div>
+          <div className="caseIndex" aria-label={profile.cases}>
+            {caseStudies.map((project) => <a href={pagePath(language, project.slug)} key={project.slug}><span>{project.title}</span><span>{profile.read}<ArrowRight size={16} /></span></a>)}
+          </div>
           <div className="projectGrid">
             {localizedProjects.map((project) => {
               const Icon = project.icon;
               return (
                 <article className="projectCard" key={project.title}>
-                  <div className="projectVisual" aria-hidden="true">
+                  {project.title === "Copa Kahl" ? <img className="projectScreenshot" src={`${basePath}copa-kahl.webp`} alt="Copa Se mató Pavón" width="1440" height="900" loading="lazy" /> : <div className="projectVisual" aria-hidden="true">
                     <Icon size={44} />
                     <span />
                     <span />
-                  </div>
+                  </div>}
                   <div className="projectBody">
                     <p className="eyebrow">{project.eyebrow}</p>
                     <h3>{project.title}</h3>
@@ -947,9 +941,3 @@ ops: Docker + AWS/EKS + health checks`}</pre>
 }
 
 export default App;
-
-createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
