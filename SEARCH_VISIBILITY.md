@@ -12,7 +12,29 @@ Public interface capture: `public/copa-kahl.webp`, taken on 2026-10-01.
 The deployment currently displays Copa Se mató Pavón branding. The screenshot
 contains no entered credentials or participant records.
 
-## Search Console: account-owner setup
+## Search Console: verified setup
+
+On 2026-10-01, the URL-prefix property was created and ownership was verified
+in the owner's signed-in Google account using Google's HTML file. Keep
+`public/google89747c0ddf6f4c40.html` and its deployed copy in place.
+
+The `sitemap.xml` submission was accepted by Search Console. Its initial
+processing status was "Couldn't fetch", with zero discovered pages. A separate
+live check returned HTTP 200, `application/xml`, and 12 valid sitemap URLs,
+including with a Googlebot user-agent string. This local request is not proof
+that Google's crawler successfully fetched it. Recheck the processing status
+before reporting the sitemap as processed.
+
+The homepage inspection initially reported "URL is not on Google" and
+"URL is unknown to Google". Do not report any URL as indexed without a fresh
+inspection showing that result.
+
+An indexing request for the English homepage was accepted on 2026-10-01.
+Search Console confirmed that the URL was added to its priority crawl queue.
+This is a request, not confirmation of indexing. Do not repeatedly resubmit the
+same URL to try to increase priority.
+
+### Reverification steps
 
 1. Add a URL-prefix property for
    `https://nahuel149.github.io/balsas-nahuel-portfolio/` in Google Search Console.
@@ -23,7 +45,6 @@ contains no entered credentials or participant records.
 4. Inspect the homepages and case-study URLs. Check actual indexing status before
    reporting them as indexed. Deployment and sitemap submission do not prove it.
 
-No Search Console property has been created or verified by this code change.
 No third-party analytics or visitor tracking is installed.
 
 ## Hiring profile updates: owner review
