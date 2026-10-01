@@ -31,6 +31,7 @@ import {
   Trophy,
 } from "lucide-react";
 import "./styles.css";
+import { getGithubProjects } from "./github-projects.js";
 
 const links = {
   github: "https://github.com/Nahuel149/",
@@ -46,7 +47,7 @@ const links = {
 const stats = [
   ["177", "tracked D-Unit commits"],
   ["94", "deployment records"],
-  ["4", "work languages"],
+  ["3", "work languages"],
   ["JST", "remote-ready schedule"],
 ];
 
@@ -739,7 +740,7 @@ function App() {
             <h2 id="atlas-title">{languageContent ? languageContent.atlas.title : "More of the work I can safely talk about."}</h2>
           </div>
           <div className="atlasGrid">
-            {localizedAtlas.map((project) => {
+            {[...getGithubProjects(language, Github), ...localizedAtlas.filter((project) => project.href !== links.autoresearch)].map((project) => {
               const Icon = project.icon;
               return (
                 <article className="atlasCard" key={project.title}>
@@ -762,6 +763,12 @@ function App() {
                       <span>{languageContent ? languageContent.atlas.reference : "Reference"}</span>
                     <ExternalLink size={16} />
                   </a>
+                  {project.demo && (
+                    <a className="textLink" href={project.demo} target="_blank" rel="noreferrer">
+                      <span>{language === "ja" ? "アプリを開く" : language === "es" ? "Abrir app" : "Open app"}</span>
+                      <ExternalLink size={16} />
+                    </a>
+                  )}
                 </article>
               );
             })}
